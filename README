@@ -1,0 +1,14 @@
+See documentation in doc/index.html or at http://plausible.org/nasal
+
+Important source to read is prog-nasal.c, lib.c and nasal.h.  These
+define and implement the user-side extension API.
+
+Don't use the -ansi switch to gcc.  It turns off preprocessor
+recognition of the "// ..." commenting style, which Nasal uses
+pervasively and is supported by all modern C compilers.  Note that
+-ansi doesn't generate better code, nor find any extra warning
+conditions.  Pedants can take refuge in the fact that Nasal is
+compliant with the emerging ANSI C99 standard.
+
+Feel free to send questions and comments to me at andy@plausible.org
+ - Andy Ross
