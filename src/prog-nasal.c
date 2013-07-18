@@ -131,8 +131,11 @@ int main(int argc, char** argv)
     naHash_set(namespace, naInternSymbol(NASTR("math")), naMathLib(ctx));
     naHash_set(namespace, naInternSymbol(NASTR("bits")), naBitsLib(ctx));
     naHash_set(namespace, naInternSymbol(NASTR("io")), naIOLib(ctx));
+
+#ifndef _WIN32
     naHash_set(namespace, naInternSymbol(NASTR("regex")), naRegexLib(ctx));
     naHash_set(namespace, naInternSymbol(NASTR("unix")), naUnixLib(ctx));
+#endif
 
     // Build the arg vector
     args = malloc(sizeof(naRef) * (argc-2));
