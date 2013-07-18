@@ -89,14 +89,14 @@ struct CodeGenerator {
     naRef consts;
 };
 
-void naParseError(struct Parser* p, char* msg, int line);
-void naParseInit(struct Parser* p);
-void* naParseAlloc(struct Parser* p, int bytes);
-void naParseDestroy(struct Parser* p);
-void naLex(struct Parser* p);
-naRef naCodeGen(struct Parser* p, struct Token* block, struct Token* arglist);
+EXPORT void		CALL naParseError(struct Parser* p, char* msg, int line);
+EXPORT void		CALL naParseInit(struct Parser* p);
+EXPORT void*	CALL naParseAlloc(struct Parser* p, int bytes);
+EXPORT void		CALL naParseDestroy(struct Parser* p);
+EXPORT void		CALL naLex(struct Parser* p);
+EXPORT naRef	CALL naCodeGen(struct Parser* p, struct Token* block, struct Token* arglist);
 
-void naParse(struct Parser* p);
+EXPORT void		CALL naParse(struct Parser* p);
 
 
 

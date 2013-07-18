@@ -102,14 +102,14 @@ struct Context {
 extern struct Globals* globals;
 
 // Threading low-level functions
-void* naNewLock();
-void naLock(void* lock);
-void naUnlock(void* lock);
-void* naNewSem();
-void naSemDown(void* sem);
-void naSemUpAll(void* sem, int count);
+EXPORT void*	CALL naNewLock();
+EXPORT void		CALL naLock(void* lock);
+EXPORT void		CALL naUnlock(void* lock);
+EXPORT void*	CALL naNewSem();
+EXPORT void		CALL naSemDown(void* sem);
+EXPORT void		CALL naSemUpAll(void* sem, int count);
 
-void naCheckBottleneck();
+EXPORT void CALL naCheckBottleneck();
 
 #define LOCK() naLock(globals->lock)
 #define UNLOCK() naUnlock(globals->lock)

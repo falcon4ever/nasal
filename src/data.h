@@ -121,34 +121,34 @@ struct naPool {
     int    freetop; // curr. top of the free list
 };
 
-void naFree(void* m);
-void* naAlloc(int n);
-void* naRealloc(void* buf, int sz);
-void naBZero(void* m, int n);
+EXPORT void		CALL naFree(void* m);
+EXPORT void*	CALL naAlloc(int n);
+EXPORT void*	CALL naRealloc(void* buf, int sz);
+EXPORT void		CALL naBZero(void* m, int n);
 
-int naTypeSize(int type);
-naRef naObj(int type, struct naObj* o);
-naRef naNew(naContext c, int type);
-naRef naNewCode(naContext c);
+EXPORT int		CALL naTypeSize(int type);
+EXPORT naRef	CALL naObj(int type, struct naObj* o);
+EXPORT naRef	CALL naNew(naContext c, int type);
+EXPORT naRef	CALL naNewCode(naContext c);
 
-int naStr_equal(naRef s1, naRef s2);
-naRef naStr_fromnum(naRef dest, double num);
-int naStr_numeric(naRef str);
-int naStr_parsenum(char* str, int len, double* result);
-int naStr_tonum(naRef str, double* out);
-naRef naStr_buf(naRef str, int len);
+EXPORT int		CALL naStr_equal(naRef s1, naRef s2);
+EXPORT naRef	CALL naStr_fromnum(naRef dest, double num);
+EXPORT int		CALL naStr_numeric(naRef str);
+EXPORT int		CALL naStr_parsenum(char* str, int len, double* result);
+EXPORT int		CALL naStr_tonum(naRef str, double* out);
+EXPORT naRef	CALL naStr_buf(naRef str, int len);
 
-int naHash_tryset(naRef hash, naRef key, naRef val); // sets if exists
-int naHash_sym(struct naHash* h, struct naStr* sym, naRef* out);
-void naHash_newsym(struct naHash* h, naRef* sym, naRef* val);
+EXPORT int		CALL naHash_tryset(naRef hash, naRef key, naRef val); // sets if exists
+EXPORT int		CALL naHash_sym(struct naHash* h, struct naStr* sym, naRef* out);
+EXPORT void		CALL naHash_newsym(struct naHash* h, naRef* sym, naRef* val);
 
-void naGC_init(struct naPool* p, int type);
-struct naObj** naGC_get(struct naPool* p, int n, int* nout);
-void naGC_swapfree(void** target, void* val);
-void naGC_freedead();
+EXPORT void				CALL naGC_init(struct naPool* p, int type);
+EXPORT struct naObj**	CALL naGC_get(struct naPool* p, int n, int* nout);
+EXPORT void				CALL naGC_swapfree(void** target, void* val);
+EXPORT void				CALL naGC_freedead();
 
-void naStr_gcclean(struct naStr* s);
-void naVec_gcclean(struct naVec* s);
-void naHash_gcclean(struct naHash* s);
+EXPORT void CALL naStr_gcclean(struct naStr* s);
+EXPORT void CALL naVec_gcclean(struct naVec* s);
+EXPORT void CALL naHash_gcclean(struct naHash* s);
 
 #endif // _DATA_H

@@ -31,6 +31,6 @@ extern struct naIOType naStdIOType;
 #define IS_STDIO(r) (IS_IO(r) && (IOGHOST(r)->type == &naStdIOType))
 
 // Defined in iolib.c, there is no "library" header to put this in
-naRef naIOGhost(naContext c, FILE* f);
+EXPORT naRef CALL naIOGhost(naContext c, FILE* f);
 
 #endif // _IOLIB_H
