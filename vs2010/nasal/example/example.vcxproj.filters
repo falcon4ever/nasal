@@ -13,61 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="libnasal">
-      <UniqueIdentifier>{fe966c9e-d7fb-4b80-975c-2d414d4186c7}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\prog-nasal.c">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\bitslib.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\vector.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\code.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\codegen.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\debug.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\gc.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\hash.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\iolib.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\lex.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\lib.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mathlib.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\misc.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\parse.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\string.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\thread-posix.c">
-      <Filter>libnasal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\thread-win32.c">
-      <Filter>libnasal</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

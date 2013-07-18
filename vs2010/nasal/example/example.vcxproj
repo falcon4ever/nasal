@@ -54,6 +54,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libnasal.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -74,23 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\bitslib.c" />
-    <ClCompile Include="..\..\..\src\code.c" />
-    <ClCompile Include="..\..\..\src\codegen.c" />
-    <ClCompile Include="..\..\..\src\debug.c" />
-    <ClCompile Include="..\..\..\src\gc.c" />
-    <ClCompile Include="..\..\..\src\hash.c" />
-    <ClCompile Include="..\..\..\src\iolib.c" />
-    <ClCompile Include="..\..\..\src\lex.c" />
-    <ClCompile Include="..\..\..\src\lib.c" />
-    <ClCompile Include="..\..\..\src\mathlib.c" />
-    <ClCompile Include="..\..\..\src\misc.c" />
-    <ClCompile Include="..\..\..\src\parse.c" />
     <ClCompile Include="..\..\..\src\prog-nasal.c" />
-    <ClCompile Include="..\..\..\src\string.c" />
-    <ClCompile Include="..\..\..\src\thread-posix.c" />
-    <ClCompile Include="..\..\..\src\thread-win32.c" />
-    <ClCompile Include="..\..\..\src\vector.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
