@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libnasal", "libnasal\libnasal.vcxproj", "{B73036DB-9B2E-4E94-8F7F-70B0EF43ABEA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example", "example\example.vcxproj", "{FE80DD89-AD1D-46E3-9CC1-27B7BD04DD26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B73036DB-9B2E-4E94-8F7F-70B0EF43ABEA} = {B73036DB-9B2E-4E94-8F7F-70B0EF43ABEA}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
