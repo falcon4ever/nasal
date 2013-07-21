@@ -1,3 +1,5 @@
+#if !defined(TARGET_QNX) && !defined(TARGET_ANDROID)
+
 #include <pcre.h>
 #include <string.h>
 #include "data.h"
@@ -91,3 +93,5 @@ naRef naRegexLib(naContext c)
                naNewFunc(c, naNewCCode(c, funcs[i].func)));
     return ns;
 }
+
+#endif

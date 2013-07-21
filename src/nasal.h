@@ -4,13 +4,13 @@
 extern "C" {
 #endif
 
-#define TARGET_QNX
-#ifdef TARGET_QNX
-#define EXPORT
-#define CALL
+#if defined(TARGET_QNX) || defined(TARGET_ANDROID)
+	#define EXPORT
+	#define CALL	
+	#define BYTE_ORDER LITTLE_ENDIAN
 #else
-#define EXPORT						__declspec(dllexport)
-#define CALL						_cdecl
+	#define EXPORT						__declspec(dllexport)
+	#define CALL						_cdecl
 #endif
 
 #ifndef BYTE_ORDER
@@ -31,7 +31,7 @@ extern "C" {
 
 #  if defined(ultrix) || defined(__alpha__) || defined(__alpha) ||  \
       defined(__i386__) || defined(__i486__) || defined(_X86_) ||   \
-      defined(sun386) || defined(TARGET_QNX)
+      defined(sun386)
 #   define BYTE_ORDER LITTLE_ENDIAN
 #  else
 #   define BYTE_ORDER BIG_ENDIAN
